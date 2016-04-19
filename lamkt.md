@@ -5,24 +5,25 @@
 
 [2.Cấu hình file configuration] (#2)
 
-[a.Subnet Declaration] (#2a)
+  [a.Subnet Declaration] (#2a)
 
-[b.Range Parameter] (#2b)
+  [b.Range Parameter] (#2b)
 
-[c.Static IP Address Using DHCP] (#2c)
+  [c.Static IP Address Using DHCP] (#2c)
 
-[d.Shared-network Declaration] (#2d)
+  [d.Shared-network Declaration] (#2d)
 
-[e.Group Declaration] (#2e)
+  [e.Group Declaration] (#2e)
 
 [3.DHCP Relay Agent] (#3)
 
 <a name="1"></a>
 ### 1.Cài đặt DHCP server
-Trước tiên bạn cài đặt gói DHCP với quyền root.
+- Ở đây tôi dùng các máy ảo Centos2 làm dhcp server, Centos làm dhcp relay agent, 2 clients là win7 và win8(máy thật).
+- Trước tiên bạn cài đặt gói DHCP với quyền root.
 <img src="http://i.imgur.com/8Ew5WCX.png" />
 
-Sau khi cài, sẽ xuất hiện file configuration tại đường dẫn /etc/dhcp/dhcpd.conf, nhưng chỉ là file trống.
+- Sau khi cài, sẽ xuất hiện file configuration tại đường dẫn /etc/dhcp/dhcpd.conf, nhưng chỉ là file trống.
 <img src="http://i.imgur.com/rXNdDXf.png" />
 
 File configuration tương tự được lưu tại đường dẫn /usr/share/doc/dhcp-4.1.1/dhcpd.conf.sample, bạn
@@ -41,8 +42,6 @@ hoặc áp dụng 1 nhóm các thông số tới 1 nhóm các khai báo.
 - Các thông số trước dấu "{}" được coi là thông số chung, áp dụng cho tất cả các phần bên dưới nó.
 - Mô hình sau sẽ là mô hình dùng chung cho lab a,b,c.Các máy ảo đều sử dụng card VMnet1.
 <img src="http://i.imgur.com/CIZAbfr.png" />
-
-- Ở đây tôi dùng các máy ảo Centos2 làm dhcp server, Centos làm dhcp relay agent, 2 clients là win7 và win8(máy thật).
 
 <a name="2a"></a>
 #### a.Subnet Declaration
